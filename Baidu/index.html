@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#wrapper {
+			_zoom: 1;
+		}
+		.wrapper_new {
+			font-family: 'Microsoft YaHei',Arial,sans-serif;
+		}
+
+		.wrapper_new #head {
+			border-bottom: 0;
+			min-width: 1060px;
+		}
+		#head {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			position: absolute;
+			z-index: 301;
+			min-width: 1000px;
+			background: #fff;
+			border-bottom: 1px solid #ebebeb;
+			position: fixed;
+			_position: absolute;
+			-webkit-transform: translateZ(0);
+		}
+		.wrapper_new .s_form {
+			height: 70px;
+			padding-left: 20px;
+		}
+		.s_form {
+			zoom: 1;
+			height: 55px;
+			padding: 0 0 0 10px;
+			padding-left: 10px;
+		}
+		.wrapper_new #u {
+			height: 60px;
+			margin: 4px 0 0;
+			padding-right: 24px;
+		}
+		#u {
+			z-index: 301;
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 21px 9px 5px 0;
+			padding: 0;
+			padding-right: 0px;
+		}
+		#u {
+			color: #999;
+			white-space: nowrap;
+			position: absolute;
+			right: 10px;
+			top: 4px;
+			z-index: 299;
+		}
+		#u, #head, #tool, #search, #foot {
+			font-size: 12px;
+		}
+		.setting-content{
+			display: none;
+			background: red;
+			margin-top: -13px;
+		}
+	</style>
+
+
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+	</script>
+
+
+	<script>
+		$(document).ready(function(){
+			$("#setting,.setting-content").hover(function(){
+				$(".setting-content")
+				.css("display","block");
+			},function(){
+				$(".setting-content")
+				.css("display","none");
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="head">
+			<div class="head_wrapper">
+				<div class="s_form">
+					<div class="s_form_wrapper soutu-env-nomac soutu-env-result">
+						<a href="/" id="result_logo" onmousedown="return c({'fm':'tab','tab':'logo'})">
+							<img class="index-logo-src" src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="到百度首页" title="到百度首页">
+						</a>
+					</div>
+
+				</div>
+				<div id="u">
+					<a href="">首页</a>
+					<a id="setting" href="">设置</a>
+					<div class="setting-content">
+						<p>搜索</p>
+						<p>高级</p>
+						<p>关闭</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="s_tab"></div>
+		<div id="wrapper_wrapper">
+			<div id="container"></div>
+
+
+		</div>
+
+	</div>
+
+</body>
+</html>

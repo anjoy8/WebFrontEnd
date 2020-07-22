@@ -67,13 +67,39 @@
 			background: red;
 			margin-top: -13px;
 		}
+		.personal-information{
+			display: none;
+			background: blue;
+			margin-top: -13px;
+		}
+		#search {
+			width: 558px;
+			height: 36px;
+			border: 2px solid #c4c7ce;
+			border-radius: 10px 0 0 10px;
+			border-right: 0;
+			overflow: visible;
+		}
+		#submit {
+			cursor: pointer;
+			width: 108px;
+			height: 44px;
+			line-height: 45px;
+			padding: 0;
+			background: 0 0;
+			background-color: #4e6ef2;
+			border-radius: 0 10px 10px 0;
+			font-size: 17px;
+			color: #fff;
+			box-shadow: none;
+			font-weight: 400;
+			border: none;
+			outline: 0;
+		}
 	</style>
-
 
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 	</script>
-
-
 	<script>
 		$(document).ready(function(){
 			$("#setting,.setting-content").hover(function(){
@@ -86,6 +112,18 @@
 
 		});
 	</script>
+	<script>
+		$(document).ready(function(){
+			$("#person,.personal-information").hover(function(){
+				$(".personal-information")
+				.css("display","block");
+			},function(){
+				$(".personal-information")
+				.css("display","none");
+			});
+
+		});
+	</script>
 
 </head>
 <body>
@@ -93,12 +131,17 @@
 		<div id="head">
 			<div class="head_wrapper">
 				<div class="s_form">
+
 					<div class="s_form_wrapper soutu-env-nomac soutu-env-result">
 						<a href="/" id="result_logo" onmousedown="return c({'fm':'tab','tab':'logo'})">
 							<img class="index-logo-src" src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="到百度首页" title="到百度首页">
 						</a>
+						<input id="search"></input>
+						<button id="submit">百度一下</button>
 					</div>
-
+					
+					
+					
 				</div>
 				<div id="u">
 					<a href="">首页</a>
@@ -108,14 +151,22 @@
 						<p>高级</p>
 						<p>关闭</p>
 					</div>
+					<a id="person" href="">个人信息</a>
+					<div class="personal-information">
+						<p>个人中心</p>
+						<p>消息</p>
+						<p>退出</p>
+					</div>
 				</div>
+
 			</div>
 
 		</div>
 		<div id="s_tab"></div>
 		<div id="wrapper_wrapper">
 			<div id="container"></div>
-
+			<div id="foot"></div>
+			<div id="page"></div>
 
 		</div>
 
